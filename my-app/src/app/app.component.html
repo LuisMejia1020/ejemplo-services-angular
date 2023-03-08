@@ -1,4 +1,5 @@
 <div>
+  <router-outlet></router-outlet>
   <button type="button" class="btn btn-info" (click)="crearNuevaNotificacion('informacion importante', mensajeInformacion.descripcion, mensajeInformacion.tipo)">Notificar informacion util</button>
   <button type="button" class="btn btn-warning" (click)="crearNuevaNotificacion('informacion de advertencia', mensajeAdvertencia.descripcion, mensajeAdvertencia.tipo)">Notificar advertencia</button>
   <button type="button" class="btn btn-danger" (click)="crearNuevaNotificacion('informacion critica', mensajeError.descripcion, mensajeError.tipo)">Notificar critica</button>
@@ -17,6 +18,8 @@
   </div>
  
   
-<router-outlet></router-outlet>
+  <a class="text-dark mx-3" routerLink="login">login</a>
+  <a class="text-dark mx-3" routerLink="inicio">inicio</a>
+
 </div>
 
