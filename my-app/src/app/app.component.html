@@ -1,0 +1,22 @@
+<div>
+  <button type="button" class="btn btn-info" (click)="crearNuevaNotificacion('informacion importante', mensajeInformacion.descripcion, mensajeInformacion.tipo)">Notificar informacion util</button>
+  <button type="button" class="btn btn-warning" (click)="crearNuevaNotificacion('informacion de advertencia', mensajeAdvertencia.descripcion, mensajeAdvertencia.tipo)">Notificar advertencia</button>
+  <button type="button" class="btn btn-danger" (click)="crearNuevaNotificacion('informacion critica', mensajeError.descripcion, mensajeError.tipo)">Notificar critica</button>
+  <button type="button" class="btn btn-secondary"  (click)="limpiarMensajes()">Limpiar todas las notificaciones</button>
+  <!--alerta de informacion-->
+  <div class="alert" 
+  [class.alert-primary]="notificacion.tipoNotificacion==='informacion'" 
+  [class.alert-warning]="notificacion.tipoNotificacion==='advertencia'" 
+  [class.alert-danger]="notificacion.tipoNotificacion==='error'" 
+
+  role="alert" *ngFor="let notificacion of servicioNotificaciones.notificaciones">
+  <h3 class="alert-heading">{{notificacion.titulo}}</h3>
+   <p>{{notificacion.mensaje}}</p>
+   <hr>
+   <p class="mb-0">{{notificacion.horaFecha.toLocaleTimeString()}}</p>
+  </div>
+ 
+  
+<router-outlet></router-outlet>
+</div>
+

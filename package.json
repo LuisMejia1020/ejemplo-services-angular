@@ -1,0 +1,24 @@
+{
+  "name": "ejemplo-services-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nuevaAplicacion":"ng new my-app",
+    "generarServicio":"ng generate service notificaciones"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisMejia1020/ejemplo-services-angular.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisMejia1020/ejemplo-services-angular/issues"
+  },
+  "homepage": "https://github.com/LuisMejia1020/ejemplo-services-angular#readme",
+  "dependencies": {
+    "@angular/cli": "^15.2.1"
+  }
+}
